@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will you be my Valentine, lovee?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #ffe6e6;
+      color: #b30000;
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    #buttons button {
+      font-size: 1.5em;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #noBtn:hover {
+      position: relative;
+      left: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will you be my Valentine, <strong>lovee</strong>?</h1>
+
+  <div id="buttons">
+    <button id="yesBtn">Yes 💖</button>
+    <button id="noBtn">No 😢</button>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+
+    yesBtn.addEventListener("click", () => {
+      alert("Yay! 💕 I’m so happy, lovee!");
+    });
+
+    noBtn.addEventListener("mouseenter", () => {
+      // Moves the No button around so it's hard to click
+      noBtn.style.left = Math.random() * 200 + "px";
+      noBtn.style.top = Math.random() * 100 + "px";
+      noBtn.style.position = "relative";
+    });
+  </script>
+
+</body>
+</html>
