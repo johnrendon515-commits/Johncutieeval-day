@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Lovee ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      text-align: center;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      position: relative;
+    }
+
+    button {
+      font-size: 1.3em;
+      padding: 12px 25px;
+      margin: 10px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #ffffff;
+      color: #ff4d6d;
+    }
+
+    #noBtn {
+      background-color: #ff4d6d;
+      color: white;
+      position: relative;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will you be my Valentine, lovee? 💖</h1>
+
+  <div class="buttons">
+    <button id="yesBtn">Yes 💕</button>
+    <button id="noBtn">No 😢</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+
+    noBtn.addEventListener("mouseenter", () => {
+      const randomX = Math.floor(Math.random() * 300) - 150;
+      const randomY = Math.floor(Math.random() * 200) - 100;
+      noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    });
+
+    yesBtn.addEventListener("click", () => {
+      document.body.innerHTML = "<h1>Yay! 💖 I love you so much, lovee! 😘</h1>";
+    });
+  </script>
+
+</body>
+</html>
